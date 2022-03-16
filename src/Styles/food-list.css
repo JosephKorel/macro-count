@@ -1,0 +1,76 @@
+.meal-macro {
+  width: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #242423;
+  border: 5px solid #e8eddf;
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 10px;
+  animation-name: opacity;
+  animation-duration: 1s;
+  margin-top: 24px;
+  background: #333533;
+  font-family: "Montserrat", sans-serif;
+}
+
+.mealh1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #a39bff;
+}
+
+.amounth2 {
+  font-weight: 200;
+  color: #e8eddf;
+}
+
+.meal-macro ul {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.meal-macro ul li {
+  /* padding: 5px; */
+  list-style: none;
+  font-weight: 300;
+  font-size: 1.4em;
+}
+
+.meal-macro ul li span {
+  font-size: 1.5em;
+}
+
+.delete-icon {
+  margin-bottom: 90px;
+  color: #e8eddf;
+  padding: 0;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  transform: scale(1.2);
+  color: #a39bff;
+}
+
+.carbli {
+  color: #e5383b;
+}
+
+.protli {
+  color: #2b9348;
+}
+
+.fatli {
+  color: #f5cb5c;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

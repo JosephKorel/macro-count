@@ -1,0 +1,120 @@
+.header-div {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.239);
+  position: fixed;
+  top: 0;
+  left: 0%;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  font-family: "Montserrat", sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+.macro-input {
+  width: 45%;
+  margin: auto;
+  margin-bottom: 20%;
+  background-color: red;
+  padding: 20px;
+  border-radius: 12px;
+  animation-name: slide;
+  animation-duration: 0.2s;
+  transform: translateY(700px);
+  animation-fill-mode: forwards;
+  background-color: #333533;
+  border: 1px solid #f5cb5c;
+}
+
+.input-guide {
+  padding: 0;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #cfdbd5;
+}
+
+.macro-input input {
+  padding: 10px;
+  border: 1px solid #cfdbd5;
+  border-radius: 12px;
+  transition: 300ms;
+  outline: none;
+  background-color: #333533;
+  color: #e8eddf;
+}
+
+.macro-input h1 {
+  font-weight: 300;
+}
+
+.macro {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#qtd-input {
+  border: 2px solid #cfdbd5;
+}
+
+#qtd-input:hover {
+  border: 2px solid #fdfdfd;
+}
+
+#carb-input {
+  border: 2px solid #e5383b;
+}
+
+#carb-input:hover {
+  border: 2px solid #f62226;
+}
+
+#prot-input {
+  border: 2px solid #2b9348;
+}
+
+#prot-input:hover {
+  border: 2px solid #25b34d;
+}
+
+#fat-input {
+  border: 2px solid #f5cb5c;
+}
+
+#fat-input:hover {
+  border: 2px solid #f6c53f;
+}
+
+#add-button {
+  width: 60%;
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-top: 22px;
+  background-color: #cfdbd5;
+  color: #242423;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4em;
+  font-weight: 400;
+}
+
+#add-button:hover {
+  background-color: #f5cb5c;
+  color: #333533;
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-80px);
+  }
+}

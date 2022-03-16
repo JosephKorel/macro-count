@@ -1,0 +1,38 @@
+.overview-div {
+  width: 500px;
+  height: 400px;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #cfdbd5;
+  border: none;
+  border-radius: 18px;
+  color: #242423;
+}
+
+.bar-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bars {
+  width: 150px;
+  height: 150px;
+}
+
+.overview-div h1 {
+  font-weight: 400;
+}
+
+/* .total-carb {
+  color: #e5383b;
+}
+
+.total-prot {
+  color: #2b9348;
+}
+
+.total-fat {
+  color: #f5cb5c;
+}
+ */
