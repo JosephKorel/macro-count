@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../Styles/diet-overview.css";
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
-import CircularProgress from "@mui/material/CircularProgress";
+import { Progress } from "antd";
+
 function TotalCalories(props) {
   const objCarb = props.list.map((obj) => {
     return Number(obj.carbo);
@@ -43,51 +42,37 @@ function TotalCalories(props) {
   return (
     <div className="overview-div">
       <div className="bar-container">
-        <div className="bars">
-          <CircularProgressbar
-            value={carbup}
-            maxValue={totalCarbBar}
-            text={carbPercentage + "%"}
-            styles={buildStyles({
-              pathTransitionDuration: 1,
-              pathColor: "#e5383b",
-              textColor: "#242423",
-              trailColor: "#333533",
-            })}
-          ></CircularProgressbar>
+        <div className="progress-bars">
+          <Progress
+            type="circle"
+            strokeColor="#e5383b"
+            percent={Number(carbPercentage)}
+            width={150}
+            trailColor="#333533"
+          />
+          <h1 className="total-carb">Carboidratos: {carbSum.toFixed(1)} g</h1>
         </div>
-        <div className="bars">
-          <CircularProgressbar
-            value={Number(proteinPercentage)}
-            maxValue={totalProtBar}
-            text={proteinPercentage + "%"}
-            styles={buildStyles({
-              pathTransitionDuration: 1,
-              pathColor: "#2b9348",
-              textColor: "#242423",
-              trailColor: "#333533",
-            })}
-          ></CircularProgressbar>
+        <div className="progress-bars">
+          <Progress
+            type="circle"
+            strokeColor="#2b9348"
+            percent={Number(proteinPercentage)}
+            width={150}
+            trailColor="#333533"
+          />
+          <h1 className="total-prot">Proteínas: {proteinSum} g</h1>
         </div>
-        <div className="bars">
-          <CircularProgressbar
-            value={Number(fatPercentage)}
-            maxValue={totalFatBar}
-            text={fatPercentage + "%"}
-            styles={buildStyles({
-              pathTransitionDuration: 1,
-              pathColor: "#f5cb5c",
-              textColor: "#242423",
-              trailColor: "#333533",
-            })}
-          ></CircularProgressbar>
+        <div className="progress-bars">
+          <Progress
+            type="circle"
+            strokeColor="#F5CB5C"
+            percent={Number(fatPercentage)}
+            width={150}
+            trailColor="#333533"
+          />
+          <h1 className="total-fat">Gorduras: {fatSum} g</h1>
         </div>
       </div>
-      <h1 className="total-carb">Carboidratos: {carbSum} g</h1>
-      <CircularProgress value={34}></CircularProgress>
-      <h1 className="total-prot">Proteínas: {proteinSum} g</h1>
-      <h1 className="total-fat">Gorduras: {fatSum} g</h1>
-      <h1>Kcal: {calorieSum}</h1>
     </div>
   );
 }

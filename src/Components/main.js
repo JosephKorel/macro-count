@@ -3,7 +3,6 @@ import FoodList from "./food-list";
 import FoodInput from "./food-input";
 import UserInput from "./user-input";
 import TotalCalories from "./diet-overview";
-import Bars from "./progress-bar";
 
 function Main() {
   const [list, setList] = useState([]);

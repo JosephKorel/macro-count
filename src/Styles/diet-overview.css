@@ -1,38 +1,50 @@
 .overview-div {
-  width: 500px;
-  height: 400px;
+  width: 30%;
+  height: 500px;
   font-family: "Montserrat", sans-serif;
   margin-top: 30px;
   padding: 20px;
   background-color: #cfdbd5;
-  border: none;
+  border: 1px solid #f5cb5c;
   border-radius: 18px;
   color: #242423;
+  -webkit-box-shadow: 5px 5px 15px -2px rgba(245, 203, 92, 0.68);
+  box-shadow: 5px 5px 15px -2px rgba(245, 203, 92, 0.68);
+  animation-name: opacity;
+  animation-duration: 0.5s;
 }
 
-.bar-container {
+.progress-bars {
   display: flex;
   justify-content: space-evenly;
-}
-
-.bars {
-  width: 150px;
-  height: 150px;
+  align-items: center;
+  padding: 5px;
+  animation-name: leftslide;
+  animation-duration: 1s;
+  transform: translateX(800px);
+  animation-fill-mode: forwards;
 }
 
 .overview-div h1 {
+  width: 150px;
   font-weight: 400;
 }
 
-/* .total-carb {
-  color: #e5383b;
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.total-prot {
-  color: #2b9348;
+@keyframes leftslide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-40px);
+  }
 }
-
-.total-fat {
-  color: #f5cb5c;
-}
- */

@@ -17,9 +17,11 @@ function UserInput(props) {
     const MealName = document.querySelector('input[name="food-name"]').value;
     props.setNameInput(MealName);
   }
+
   return (
     <header className="user-input">
       <h1>Macro tracker</h1>
+      <div></div>
       <form className="input-form">
         <input
           type="text"
