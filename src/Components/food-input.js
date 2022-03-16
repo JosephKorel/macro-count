@@ -44,7 +44,7 @@ function FoodInput(props) {
       props.setShow(false);
 
       /* Limpar os inputs */
-      /* document.querySelectorAll("input").forEach((input) => (input.value = "")); */
+      document.querySelectorAll("input").forEach((input) => (input.value = ""));
     }
   }
 

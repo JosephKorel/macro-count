@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import FoodList from "./food-list";
 import FoodInput from "./food-input";
 import UserInput from "./user-input";
@@ -9,10 +9,23 @@ function Main() {
   const [show, setShow] = useState(false);
   const [nameInput, setNameInput] = useState("");
 
+  const storage = "savedlist";
+
   function deleteItem(obj) {
     let newList = list.filter((it) => it.id != obj.id);
     setList(newList);
   }
+
+  useEffect(() => {
+    let savedlist = JSON.parse(localStorage.getItem(storage));
+    if (savedlist) {
+      setList(savedlist);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(storage, JSON.stringify(list));
+  }, [list]);
 
   return (
     <div>
