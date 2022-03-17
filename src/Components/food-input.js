@@ -60,31 +60,29 @@ function FoodInput(props) {
       onClick={hide}
     >
       <form className="macro-input" id="table-input">
-        <h1 className="input-guide">
-          Agora digite os valores referentes à tabela nutricional
-        </h1>
+        <h1 className="input-guide">{props.inputguide}</h1>
         <div className="macro">
           <input
             type="number"
             name="nt-amount"
-            placeholder="Quantidade"
+            placeholder={props.amount}
             id="qtd-input"
           ></input>
           <input
             type="number"
             name="carb"
-            placeholder="Carboidrato"
+            placeholder={props.carbamount}
             id="carb-input"
           ></input>
           <input
             type="number"
             name="prot"
-            placeholder="Proteína"
+            placeholder={props.protamount}
             id="prot-input"
           ></input>
           <input
             type="number"
-            placeholder="Gordura"
+            placeholder={props.fatamount}
             name="fat"
             id="fat-input"
           ></input>
@@ -92,7 +90,7 @@ function FoodInput(props) {
         <input
           type="submit"
           onClick={addMeal}
-          value="Adicionar"
+          value={props.addbtn}
           id="add-button"
         ></input>
       </form>

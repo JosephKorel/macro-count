@@ -8,7 +8,9 @@ function FoodList(props) {
       <div className="meal-macro">
         <div>
           <h1 className="mealh1">{obj.meal}</h1>
-          <h2 className="amounth2">Quantidade: {obj.amount} g</h2>
+          <h2 className="amounth2">
+            {props.amount}: {obj.amount} g
+          </h2>
           <h2 className="amounth2">{obj.kcal} kcal</h2>
         </div>
         <ul>

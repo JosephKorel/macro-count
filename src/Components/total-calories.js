@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../Styles/diet-overview.css";
+import "../Styles/total-calories.css";
 import { Progress } from "antd";
 
 function TotalCalories(props) {
@@ -50,7 +50,9 @@ function TotalCalories(props) {
             width={150}
             trailColor="#333533"
           />
-          <h1 className="total-carb">Carboidratos: {carbSum.toFixed(1)} g</h1>
+          <h1>
+            {props.carbamount}: {carbSum.toFixed(1)} g
+          </h1>
         </div>
         <div className="progress-bars">
           <Progress
@@ -60,7 +62,9 @@ function TotalCalories(props) {
             width={150}
             trailColor="#333533"
           />
-          <h1 className="total-prot">Proteínas: {proteinSum} g</h1>
+          <h1>
+            {props.protamount}: {proteinSum} g
+          </h1>
         </div>
         <div className="progress-bars">
           <Progress
@@ -70,7 +74,10 @@ function TotalCalories(props) {
             width={150}
             trailColor="#333533"
           />
-          <h1 className="total-fat">Gorduras: {fatSum} g</h1>
+          <h1>
+            {props.fatamount}:<br></br>
+            {fatSum} g
+          </h1>
         </div>
       </div>
     </div>

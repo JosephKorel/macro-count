@@ -1,5 +1,6 @@
 import React from "react";
 import "../Styles/user-input.css";
+import Switch from "@mui/material/Switch";
 
 function UserInput(props) {
   function ShowInput(event) {
@@ -20,6 +21,11 @@ function UserInput(props) {
 
   return (
     <header className="user-input">
+      <div className="lg-change">
+        <p>PT-BR</p>
+        <Switch onClick={props.languageChange}></Switch>
+        <p>KR</p>
+      </div>
       <h1>Macro tracker</h1>
       <div></div>
       <form className="input-form">
@@ -28,7 +34,7 @@ function UserInput(props) {
           name="food-name"
           onChange={NameChange}
           className="food-name"
-          placeholder="Alimento"
+          placeholder={props.foodph}
         ></input>
         <input
           type="number"
@@ -37,7 +43,7 @@ function UserInput(props) {
           className="amount-input"
         ></input>
         <button className="continue-button" onClick={ShowInput}>
-          Continuar
+          {props.btnph}
         </button>
       </form>
     </header>
