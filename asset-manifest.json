@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/macro-count/static/css/main.01a0e342.css",
+    "main.js": "/macro-count/static/js/main.e4dea0f7.js",
+    "static/js/787.25eb7a63.chunk.js": "/macro-count/static/js/787.25eb7a63.chunk.js",
+    "index.html": "/macro-count/index.html",
+    "main.01a0e342.css.map": "/macro-count/static/css/main.01a0e342.css.map",
+    "main.e4dea0f7.js.map": "/macro-count/static/js/main.e4dea0f7.js.map",
+    "787.25eb7a63.chunk.js.map": "/macro-count/static/js/787.25eb7a63.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.01a0e342.css",
+    "static/js/main.e4dea0f7.js"
+  ]
+}
